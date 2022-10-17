@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="email-validate-regex:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>email-validate-regex</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="email-validate-regex-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="email-validate-regex:war exploded" />
+    </root>
+  </artifact>
+</component>
