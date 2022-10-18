@@ -7,9 +7,15 @@
 
 <h3>Customers</h3>
 
-<p th:href="@{/customer/create}">
+<p><a th:href="@{/customer/create}">
     Add new customer
-</p>
+</a></p>
+
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
 
 <table id="customers">
     <thread>
@@ -27,8 +33,8 @@
         <td th:text="${row.getName()}"></td>
         <td th:text="${row.getEmail()}"></td>
         <td th:text="${row.getAddress()}"></td>
-        <td><a th:href="@{/customer/{id}/edit(id=${row.getId()})}"></a>edit</td>
-        <td><a th:href="@{/customer/{id}/delete(id=${row.getId()})}"></a></td>
+        <td><a th:href="@{/customer/{id}/edit(id=${row.getId()})}">edit</a></td>
+        <td><a th:href="@{/customer/{id}/delete(id=${row.getId()})}">delete</a></td>
         <td><a th:href="@{/customer/{id}/view(id=${row.getId()})}">view</a></td>
     </tr>
     </tbody>
